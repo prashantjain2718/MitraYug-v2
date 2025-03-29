@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapterwise Learning - MitraYug</title>
+    
+    <!-- Unicons -->
+    <link href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>MitraYug</h1>
+        </div>
+
+        <div class="settings-container">
+            <div class="setting" id="settings-btn" role="button" tabindex="0" aria-label="Settings">
+                <i class="uil uil-setting"></i> Settings
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <button id="light-mode" aria-label="Switch to light mode">🌞 Light Mode</button>
+                <button id="dark-mode" aria-label="Switch to dark mode">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="header-section">
+            <h2>📖 Chapterwise Learning</h2>
+            <p>Learn digital skills in a structured way, one chapter at a time.</p>
+        </div>
+
+        <div class="chapters-list" id="chapterList">
+            <!-- Chapters will be dynamically loaded here -->
+        </div>
+
+        <div class="back-btn">
+            <a href="index.html" aria-label="Go back to home page">🔙 Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Topic Card Modal -->
+    <div id="topicModal" class="modal" role="dialog" aria-labelledby="topicTitle">
+        <div class="modal-content">
+            <span class="close" aria-label="Close topic">&times;</span>
+            <div class="topic-header">
+                <h3 id="topicTitle"></h3>
+                <div class="progress-indicator">
+                    Topic <span id="currentTopicNumber"></span> of <span id="totalTopics"></span>
+                </div>
+            </div>
+            <div class="topic-content">
+                <div id="topicContent" class="content-box"></div>
+                <div class="topic-actions">
+                    <button id="startQuiz" class="action-button primary-button" aria-label="Take quiz for this topic">
+                        <i class="uil uil-question-circle"></i> Take Quiz
+                    </button>
+                    <button id="nextTopic" class="action-button secondary-button" aria-label="Go to next topic">
+                        <i class="uil uil-arrow-right"></i> Next Topic
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal" role="dialog" aria-labelledby="quizQuestion">
+        <div class="modal-content">
+            <span class="close" aria-label="Close quiz">&times;</span>
+            <div class="quiz-header">
+                <h3>Quick Quiz</h3>
+                <p>Test your understanding of this topic</p>
+            </div>
+            <div class="quiz-content">
+                <h4 id="quizQuestion"></h4>
+                <div id="quizOptions" class="options-grid"></div>
+                <button id="submitAnswer" class="action-button primary-button" aria-label="Submit your answer">
+                    <i class="uil uil-check"></i> Submit Answer
+                </button>
+                <div id="quizResult" class="result-box"></div>
+                <div id="quizExplanation" class="explanation-box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
